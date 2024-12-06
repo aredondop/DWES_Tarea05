@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Artículos</title>
+</head>
+<body>
+    <h1>Listado de Artículos</h1>
+    <ul>
+        {% for id, articulo in articulos %}
+            <li>
+                <a href="/articulo?id={{ id }}">{{ articulo.nombre }} - {{ articulo.precio }}€</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

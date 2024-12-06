@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sugerencias</title>
+</head>
+<body>
+    <h1>Gestión de Sugerencias</h1>
+
+    <form method="POST">
+        <label for="sugerencia">Nueva sugerencia:</label>
+        <input type="text" id="sugerencia" name="sugerencia" required>
+        <button type="submit">Añadir</button>
+    </form>
+
+    <h2>Listado de Sugerencias</h2>
+    <ul>
+        {% for sugerencia in sugerencias %}
+            <li>{{ sugerencia }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
